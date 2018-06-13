@@ -9,7 +9,7 @@ const io = require('socket.io')(http);
 
 app.use(express.static('dist', {index: 'demo.html', maxage: '4h'}));
 app.use(bodyParser.json());
-
+console.log(process.env.TELEGRAM_TOKEN);
 // handle admin Telegram messages
 app.post('/hook', function(req, res){
     try {
